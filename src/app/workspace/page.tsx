@@ -4,8 +4,22 @@ import { useData } from "@/components/DataContext";
 import { profileColumns } from "@/lib/dataUtils";
 import { buildInsights } from "@/lib/insights";
 import {
-  Area, AreaChart, Bar, BarChart, CartesianGrid, Cell, Line, LineChart,
-  Pie, PieChart, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis
+  Area,
+  AreaChart,
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Cell,
+  Line,
+  LineChart,
+  Pie,
+  PieChart,
+  ResponsiveContainer,
+  Scatter,
+  ScatterChart,
+  Tooltip,
+  XAxis,
+  YAxis
 } from "recharts";
 
 type ChartType = "line" | "bar" | "area" | "scatter" | "pie";
@@ -14,14 +28,21 @@ export default function Workspace() {
   const { rows, datasetName } = useData();
   const profiles = useMemo(() => profileColumns(rows), [rows]);
   const cols = profiles.map((p) => p.name);
-  const nums = profiles.filter((p) => p.type === "number").map((p) => p.name);
+  const nums = profiles
+    .filter((p) => p.type === "number")
+    .map((p) => p.name);
 
   const [chart, setChart] = useState<ChartType>("line");
   const [x, setX] = useState(cols[0] || "");
   const [y, setY] = useState(nums[0] || cols[1] || "");
   const [mode, setMode] = useState<"Simple" | "Academic">("Simple");
 
-  const data = rows.map((r) => ({ ...r, [y]: Number(r[y]) }));
+  const data = rows.map((r) => {
+    const copy: Record<string, string | number | null> = { ...r };
+    copy[y] = Number(r[y]);
+    return copy;
+  });
+
   const insights = buildInsights(rows, chart, x, y);
   const colors = ["#6366F1", "#2DD4BF", "#F59E0B", "#F472B6", "#8B5CF6"];
 
@@ -48,6 +69,7 @@ export default function Workspace() {
           }}
         >
           <h3 style={{ marginTop: 0 }}>Controls</h3>
+
           <Field label="Chart">
             <select
               value={chart}
@@ -59,15 +81,25 @@ export default function Workspace() {
               ))}
             </select>
           </Field>
+
           <Field label="X variable">
-            <select value={x} onChange={(e) => setX(e.target.value)} style={input}>
+            <select
+              value={x}
+              onChange={(e) => setX(e.target.value)}
+              style={input}
+            >
               {cols.map((c) => (
                 <option key={c}>{c}</option>
               ))}
             </select>
           </Field>
+
           <Field label="Y variable">
-            <select value={y} onChange={(e) => setY(e.target.value)} style={input}>
+            <select
+              value={y}
+              onChange={(e) => setY(e.target.value)}
+              style={input}
+            >
               {cols.map((c) => (
                 <option key={c}>{c}</option>
               ))}
@@ -93,7 +125,12 @@ export default function Workspace() {
                   <XAxis dataKey={x} stroke="#9CA3AF" />
                   <YAxis stroke="#9CA3AF" />
                   <Tooltip contentStyle={tooltipStyle} />
-                  <Line dataKey={y} stroke="#2DD4BF" strokeWidth={3} dot={false} />
+                  <Line
+                    dataKey={y}
+                    stroke="#2DD4BF"
+                    strokeWidth={3}
+                    dot={false}
+                  />
                 </LineChart>
               ) : chart === "bar" ? (
                 <BarChart data={data}>
@@ -109,7 +146,12 @@ export default function Workspace() {
                   <XAxis dataKey={x} stroke="#9CA3AF" />
                   <YAxis stroke="#9CA3AF" />
                   <Tooltip contentStyle={tooltipStyle} />
-                  <Area dataKey={y} stroke="#2DD4BF" fill="#2DD4BF" fillOpacity={0.2} />
+                  <Area
+                    dataKey={y}
+                    stroke="#2DD4BF"
+                    fill="#2DD4BF"
+                    fillOpacity={0.2}
+                  />
                 </AreaChart>
               ) : chart === "scatter" ? (
                 <ScatterChart>
