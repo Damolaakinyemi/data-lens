@@ -16,18 +16,6 @@ export default function Home() {
           borderBottom: "1px solid rgba(255,255,255,0.1)"
         }}
       >
-        <div style={{ fontWeight: "bold", fontSize: "20px" }}>
-          Data Lens
-        </div>
-
-        <div style={{ display: "flex", gap: "20px", color: "#aaa" }}>
-          <span>Dashboard</span>
-          <span>Upload</span>
-          <span>Reports</span>
-        </div>
-      </nav>
-
-      <main
         style={{
           background: "#070A13",
           color: "white",
@@ -90,9 +78,6 @@ export default function Home() {
             boxShadow: "0 10px 25px rgba(99,102,241,0.3)",
             transition: "all 0.2s ease"
           }}
-        >
-          Start Analyzing
-        </button>
 
         <div style={{ marginTop: "60px", maxWidth: "800px" }}>
           <h2 style={{ fontSize: "32px", marginBottom: "20px" }}>
