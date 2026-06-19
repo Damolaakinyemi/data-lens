@@ -24,7 +24,10 @@ export default function Nav() {
         borderBottom: "1px solid rgba(255,255,255,0.08)"
       }}
     >
-      <Link href="/" style={{ display: "flex", alignItems: "center", gap: 10 }}>
+      <Link
+        href="/"
+        style={{ display: "flex", alignItems: "center", gap: 10 }}
+      >
         <div
           style={{
             width: 28,
