@@ -45,6 +45,37 @@ export default function Home() {
     and generate professional economic summaries — all in one platform.
   </p>
 </div>
+      <div
+  style={{
+    marginTop: "80px",
+    display: "flex",
+    gap: "20px",
+    flexWrap: "wrap",
+    justifyContent: "center"
+  }}
+>
+  <div style={{ width: "250px", padding: "20px", background: "#111827", borderRadius: "12px" }}>
+    <h3>Upload Data</h3>
+    <p style={{ color: "#aaa" }}>
+      Easily upload CSV and Excel files for analysis.
+    </p>
+  </div>
+
+  <div style={{ width: "250px", padding: "20px", background: "#111827", borderRadius: "12px" }}>
+    <h3>Visualize Trends</h3>
+    <p style={{ color: "#aaa" }}>
+      Create charts and explore patterns quickly.
+    </p>
+  </div>
+
+  <div style={{ width: "250px", padding: "20px", background: "#111827", borderRadius: "12px" }}>
+    <h3>Generate Insights</h3>
+    <p style={{ color: "#aaa" }}>
+      Turn data into clear explanations and reports.
+    </p>
+  </div>
+</div>
+
     </main>
   );
 }
