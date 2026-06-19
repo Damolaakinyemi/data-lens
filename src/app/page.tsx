@@ -1,5 +1,52 @@
 export default function Home() {
-  return (
+return (
+  <>
+    <nav
+      style={{
+        position: "absolute",
+        top: "20px",
+        left: "20px",
+        right: "20px",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center"
+      }}
+    >
+      <div style={{ fontWeight: "bold", fontSize: "20px" }}>
+        Data Lens
+      </div>
+
+      <div style={{ display: "flex", gap: "20px", color: "#aaa" }}>
+        <span>Dashboard</span>
+        <span>Upload</span>
+        <span>Reports</span>
+      </div>
+    </nav>
+
+    <main
+      style={{
+        background: "#070A13",
+        color: "white",
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
+        padding: "40px"
+      }}
+    >
+  <div style={{ fontWeight: "bold", fontSize: "20px" }}>
+    Data Lens
+  </div>
+
+  <div style={{ display: "flex", gap: "20px", color: "#aaa" }}>
+    <span>Dashboard</span>
+    <span>Upload</span>
+    <span>Reports</span>
+  </div>
+</nav>
+
     <main
       style={{
         background: "#070A13",
@@ -105,7 +152,7 @@ export default function Home() {
     </p>
   </div>
 </div>
-
     </main>
+  </>
   );
 }
