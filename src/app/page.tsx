@@ -73,17 +73,31 @@ return (
         Transform raw data into clear insights, visualizations, and research-grade analysis.
       </p>
 
-      <button
-        style={{
-          marginTop: "30px",
-          padding: "12px 24px",
-          background: "#6366F1",
-          color: "white",
-          border: "none",
-          borderRadius: "8px",
-          fontSize: "16px",
-          cursor: "pointer"
-        }}
+  <button
+  onMouseOver={(e) => {
+    e.currentTarget.style.transform = "scale(1.05)";
+    e.currentTarget.style.boxShadow = "0 15px 35px rgba(99,102,241,0.4)";
+  }}
+  onMouseOut={(e) => {
+    e.currentTarget.style.transform = "scale(1)";
+    e.currentTarget.style.boxShadow = "0 10px 25px rgba(99,102,241,0.3)";
+  }}
+  style={{
+    marginTop: "30px",
+    padding: "14px 28px",
+    background: "linear-gradient(90deg, #6366F1, #2DD4BF)",
+    color: "white",
+    border: "none",
+    borderRadius: "10px",
+    fontSize: "16px",
+    fontWeight: "bold",
+    cursor: "pointer",
+    boxShadow: "0 10px 25px rgba(99,102,241,0.3)",
+    transition: "all 0.2s ease"
+  }}
+>
+  Start Analyzing
+</button>
       >
         Start Analyzing
       </button>
