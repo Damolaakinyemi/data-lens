@@ -2,15 +2,20 @@ export default function Home() {
 return (
   <>
     <nav
-      style={{
-        position: "absolute",
-        top: "20px",
-        left: "20px",
-        right: "20px",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center"
-      }}
+     style={{
+  position: "absolute",
+  top: "0",
+  left: "0",
+  right: "0",
+  padding: "20px 40px",
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  background: "rgba(10, 15, 30, 0.6)",
+  backdropFilter: "blur(10px)",
+  borderBottom: "1px solid rgba(255,255,255,0.1)"
+}}
+
     >
       <div style={{ fontWeight: "bold", fontSize: "20px" }}>
         Data Lens
