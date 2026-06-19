@@ -35,6 +35,16 @@ export default function Home() {
       >
         Start Analyzing
       </button>
+      <div style={{ marginTop: "60px", maxWidth: "800px" }}>
+  <h2 style={{ fontSize: "32px", marginBottom: "20px" }}>
+    What Data Lens Does
+  </h2>
+
+  <p style={{ color: "#aaa", lineHeight: "1.6" }}>
+    Upload datasets, analyze trends, visualize patterns, forecast future values,
+    and generate professional economic summaries — all in one platform.
+  </p>
+</div>
     </main>
   );
 }
