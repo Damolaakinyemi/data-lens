@@ -54,21 +54,51 @@ export default function Home() {
     justifyContent: "center"
   }}
 >
-  <div style={{ width: "250px", padding: "20px", background: "#111827", borderRadius: "12px" }}>
+  <div
+  style={{
+    width: "250px",
+    padding: "24px",
+    background: "#111827",
+    borderRadius: "16px",
+    border: "1px solid #1f2937",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
+    textAlign: "left"
+  }}
+>
     <h3>Upload Data</h3>
     <p style={{ color: "#aaa" }}>
       Easily upload CSV and Excel files for analysis.
     </p>
   </div>
 
-  <div style={{ width: "250px", padding: "20px", background: "#111827", borderRadius: "12px" }}>
+ <div
+  style={{
+    width: "250px",
+    padding: "24px",
+    background: "#111827",
+    borderRadius: "16px",
+    border: "1px solid #1f2937",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
+    textAlign: "left"
+  }}
+>
     <h3>Visualize Trends</h3>
     <p style={{ color: "#aaa" }}>
       Create charts and explore patterns quickly.
     </p>
   </div>
 
-  <div style={{ width: "250px", padding: "20px", background: "#111827", borderRadius: "12px" }}>
+ <div
+  style={{
+    width: "250px",
+    padding: "24px",
+    background: "#111827",
+    borderRadius: "16px",
+    border: "1px solid #1f2937",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
+    textAlign: "left"
+  }}
+>
     <h3>Generate Insights</h3>
     <p style={{ color: "#aaa" }}>
       Turn data into clear explanations and reports.
