@@ -44,8 +44,7 @@ export default function Home() {
       </p>
 
       <div style={{ display: "flex", gap: 12, marginTop: 30 }}>
-        <Link
-          href="/upload"
+        /upload"
           style={{
             padding: "14px 28px",
             background: "linear-gradient(90deg, #6366F1, #2DD4BF)",
@@ -56,8 +55,8 @@ export default function Home() {
         >
           Upload Dataset
         </Link>
-        <Link
-          href="/workspace"
+
+        /workspace"
           style={{
             padding: "14px 28px",
             background: "rgba(255,255,255,0.06)",
