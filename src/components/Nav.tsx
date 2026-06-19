@@ -1,12 +1,21 @@
 "use client";
 import Link from "next/link";
 
-const linkStyle: React.CSSProperties = {
+const linkStyle = {
   color: "#9CA3AF",
   padding: "8px 14px",
   borderRadius: "10px",
   fontSize: "14px"
-};
+} as React.CSSProperties;
+
+const brandStyle = {
+  display: "flex",
+  alignItems: "center",
+  gap: 10,
+  color: "white",
+  fontWeight: 700,
+  fontSize: 18
+} as React.CSSProperties;
 
 export default function Nav() {
   return (
@@ -24,21 +33,17 @@ export default function Nav() {
         borderBottom: "1px solid rgba(255,255,255,0.08)"
       }}
     >
-      <Link
-        href="/"
-        style={{ display: "flex", alignItems: "center", gap: 10 }}
-      >
-        <div
+      <Link href="/" style={brandStyle}>
+        <span
           style={{
             width: 28,
             height: 28,
             borderRadius: 8,
-            background: "linear-gradient(135deg, #6366F1, #2DD4BF)"
+            background: "linear-gradient(135deg, #6366F1, #2DD4BF)",
+            display: "inline-block"
           }}
         />
-        <span style={{ fontWeight: 700, fontSize: 18, color: "white" }}>
-          Data Lens
-        </span>
+        <span>Data Lens</span>
       </Link>
 
       <div style={{ display: "flex", gap: 4 }}>
