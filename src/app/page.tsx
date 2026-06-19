@@ -49,34 +49,16 @@ export default function Home() {
         forecast values, and generate research-grade summaries.
       </p>
 
-      <div style={{ display: "flex", gap: 12, marginTop: 30 }}>
-        /upload"
-          style={{
-            padding: "14px 28px",
-            background: "linear-gradient(90deg, #6366F1, #2DD4BF)",
-            color: "white",
-            borderRadius: 10,
-            fontWeight: 700,
-            textDecoration: "none"
-          }}
-        >
-          Upload Dataset
-        </a>
-
-        /workspace"
-          style={{
-            padding: "14px 28px",
-            background: "rgba(255,255,255,0.06)",
-            border: "1px solid rgba(255,255,255,0.1)",
-            borderRadius: 10,
-            fontWeight: 600,
-            color: "white",
-            textDecoration: "none"
-          }}
-        >
-          Start Research
-        </a>
-      </div>
+      <p
+        style={{
+          marginTop: 30,
+          color: "#9CA3AF",
+          fontSize: 14
+        }}
+      >
+        Use the navigation menu above to access Upload, Workspace, Forecasting,
+        and Reports.
+      </p>
 
       <div
         style={{
