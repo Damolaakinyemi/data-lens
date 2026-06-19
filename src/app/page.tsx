@@ -1,7 +1,13 @@
 "use client";
-import Link from "next/link";
 
 export default function Home() {
+  const features = [
+    ["Upload data", "CSV and Excel parsing with auto schema detection."],
+    ["Visualize trends", "Premium interactive charts for any series."],
+    ["AI explanations", "Beginner and academic interpretations."],
+    ["Research reports", "Polished outputs ready for class or papers."]
+  ];
+
   return (
     <main
       style={{
@@ -16,7 +22,7 @@ export default function Home() {
     >
       <h1
         style={{
-          fontSize: "72px",
+          fontSize: 72,
           fontWeight: 800,
           letterSpacing: "-2px",
           background: "linear-gradient(90deg, #6366F1, #2DD4BF)",
@@ -31,9 +37,9 @@ export default function Home() {
 
       <p
         style={{
-          fontSize: "20px",
-          marginTop: "20px",
-          maxWidth: "650px",
+          fontSize: 20,
+          marginTop: 20,
+          maxWidth: 650,
           textAlign: "center",
           lineHeight: 1.7,
           color: "#9CA3AF"
@@ -50,11 +56,12 @@ export default function Home() {
             background: "linear-gradient(90deg, #6366F1, #2DD4BF)",
             color: "white",
             borderRadius: 10,
-            fontWeight: 700
+            fontWeight: 700,
+            textDecoration: "none"
           }}
         >
           Upload Dataset
-        </Link>
+        </a>
 
         /workspace"
           style={{
@@ -63,11 +70,12 @@ export default function Home() {
             border: "1px solid rgba(255,255,255,0.1)",
             borderRadius: 10,
             fontWeight: 600,
-            color: "white"
+            color: "white",
+            textDecoration: "none"
           }}
         >
           Start Research
-        </Link>
+        </a>
       </div>
 
       <div
@@ -80,14 +88,9 @@ export default function Home() {
           maxWidth: 1100
         }}
       >
-        {[
-          ["Upload data", "CSV and Excel parsing with auto schema detection."],
-          ["Visualize trends", "Premium interactive charts for any series."],
-          ["AI explanations", "Beginner and academic interpretations."],
-          ["Research reports", "Polished outputs ready for class or papers."]
-        ].map(([t, d]) => (
+        {features.map(([title, desc]) => (
           <div
-            key={t}
+            key={title}
             style={{
               padding: 24,
               background: "#111827",
@@ -95,9 +98,9 @@ export default function Home() {
               borderRadius: 16
             }}
           >
-            <h3 style={{ margin: 0 }}>{t}</h3>
+            <h3 style={{ margin: 0 }}>{title}</h3>
             <p style={{ color: "#9CA3AF", marginTop: 10, lineHeight: 1.6 }}>
-              {d}
+              {desc}
             </p>
           </div>
         ))}
